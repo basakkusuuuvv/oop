@@ -1,0 +1,31 @@
+class Insan:
+  def __init__(self,ad,soyad,yas,tc):
+    self.ad=ad
+    self.soyad=soyad
+    self.yas=yas
+    self.tc=tc
+  def BilgiGetir(self):
+    print(f"Bu insanın adı {self.ad}, soyadı {self.soyad},yaşı {self.yas} ,tc kimlik numarası {self.tc}")
+  def Konus(self):
+    return  "konusur"
+  def get_name_surname(self):
+    print(f"{self.name} kişisinin soyismi {self.soyad}")
+
+class Endüstri(Insan):
+  def __init__(self,ad,soyad,yas,tc):
+    super().__init__(ad,soyad,yas,tc)
+  def Konus(self):
+     return "Planlama hakkında konuşur ve çok iyidir :))"
+class Yazılımcı(Insan):
+  
+  def __init__(self,ad,soyad,yas,tc):
+    super().__init__(ad,soyad,yas,tc)
+  def Konus(self):
+     return "Yazılım hakkında konuşur ve o da iyidir"
+
+e1=Endüstri("Başak","Kusuv","21","555363")
+e1.BilgiGetir()
+print(e1.Konus())
+y1=Yazılımcı("Yeşil","Jenko","23","64677")
+y1.BilgiGetir()
+y1.Konus()
